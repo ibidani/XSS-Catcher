@@ -35,7 +35,7 @@ test-coverage-report:
 	@FLASK_DEBUG=1 python3 -m pipenv run pytest -v --cov=app --cov=config --cov-report html:cov_html $(SERVER_DIR)/tests
 
 run-web-app:
-	@npm --prefix client run serve
+	@npm --prefix client-vue3 run dev
 
 run-backend-server: lint
 	@cd $(SERVER_DIR) && FLASK_DEBUG=1 pipenv run flask run
